@@ -1,15 +1,22 @@
 /******** GLOBAL STYLES ********/
+/* Base text size so ems and rems are easy to calculate */
+html {
+	font-size: 16px;
+}
+
 body {
 	font-family: 'Montserrat', Helvetica, Arial, sans-serif;
-	font-size: 16px;
+	font-size: .9em;
 	color: #000000;
 }
 
-/* The width property has been changed to max-width */
+/* Flexbox centers the content-wrapper, so margin and overflow are no longer needed */
 .content-wrapper {
 	max-width: 1200px;
-	margin: 0 auto;
-	overflow: auto;
+	width: 90%;
+	display: flex;
+	justify-content: center;
+	flex-flow: row wrap;
 }
 
 h1,
@@ -20,37 +27,44 @@ h4 {
 	font-weight: 700;
 }
 
+/* Header sizes in ems so they scale with the body font-size */
 h1 {
-	font-size: 30px;
+	font-size: 1.875em;
+	/* 30px */
 }
 
 h2 {
-	font-size: 24px;
+	font-size: 1.5em;
+	/* 24px */
 }
 
 h3 {
-	font-size: 20px;
+	font-size: 1.25em;
+	/* 20px */
 }
 
 h4 {
-	font-size: 12px;
+	font-size: .75em;
+	/* 12px */
 }
 
+/* Body text in rems so it stays the same size on every device */
 p {
+	font-size: 1rem;
 	line-height: 36px;
 }
 
 /******** HEADER STYLES ********/
-/* The widths are in a percentage! */
 header {
-	height: 110px;
-	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	text-align: center;
 }
 
 header h1 {
-	float: left;
+	width: 100%;
 	margin: 0;
-	padding: 38px 0;
+	padding: 30px 0 10px;
 }
 
 header h1 span {
@@ -58,21 +72,23 @@ header h1 span {
 }
 
 header nav {
-	float: right;
-	padding: 46px 0;
+	width: 100%;
+	padding: 0 0 20px;
 }
 
 header nav ul {
 	margin: 0;
 	padding: 0;
+	list-style: none;
 }
 
 header nav ul li {
-	display: inline-block;
-	font-size: 14px;
+	width: 100%;
+	font-size: .875rem;
+	/* 14px */
 	font-weight: 700;
 	text-transform: uppercase;
-	padding: 0 10px;
+	padding: 5px 0;
 }
 
 header nav ul li a {
@@ -82,13 +98,11 @@ header nav ul li a {
 
 /********  MAIN STYLES ********/
 /******** TOP SECTION ********/
-/* The widths are in a percentage! */
 .main-image img {
 	width: 100%;
 	border-top: 3px solid #77A466;
 	border-bottom: 3px solid #77a466;
 }
-
 
 .main-title h2 {
 	color: #45610E;
@@ -98,7 +112,8 @@ header nav ul li a {
 /******** BOTTOM SECTION ********/
 .top-section,
 .bottom-section {
-
+	display: flex;
+	justify-content: center;
 }
 
 .bottom-section .content-wrapper {
@@ -110,22 +125,22 @@ header nav ul li a {
 .section-two,
 .section-three {
 	box-sizing: border-box;
-	float: left;
-	padding: 0 40px;
+	width: 100%;
 }
 
 .section-one {
-	width: 29%;
+	/* width: 29%; */
 }
 
+/* On mobile the sections are stacked, so the dividers run horizontally */
 .section-two {
-	width: 42%;
-	border-left: 5px solid #EEE;
-	border-right: 5px solid #EEE;
+	/* width: 42%; */
+	border-top: 5px solid #EEE;
+	border-bottom: 5px solid #EEE;
 }
 
 .section-three {
-	width: 29%;
+	/* width: 29%; */
 }
 
 .bottom-section h3 {
@@ -139,13 +154,15 @@ header nav ul li a {
 
 .menu-list li {
 	color: #45610E;
-	font-size: 16px;
+	font-size: 1rem;
+	/* 16px */
 	line-height: 36px;
 }
 
 /******** FOOTER STYLES ********/
-/* The widths are in a percentage! */
 footer {
+	display: flex;
+	justify-content: center;
 	text-align: center;
 	margin-top: 8px;
 }
@@ -154,5 +171,6 @@ footer span {
 	font-family: 'Galada', cursive;
 	text-transform: lowercase;
 	color: #45610E;
-	font-size: 14px;
+	font-size: .875rem;
+	/* 14px */
 }
