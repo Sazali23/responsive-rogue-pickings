@@ -174,3 +174,66 @@ footer span {
 	font-size: .875rem;
 	/* 14px */
 }
+
+/******** TABLET STYLES ********/
+@media all and (min-width: 768px) {
+
+	/* Three columns side by side with even space around them */
+	.bottom-section .content-wrapper {
+		justify-content: space-evenly;
+	}
+
+	.section-one {
+		width: 29%;
+	}
+
+	/* Vertical dividers on tablet; the content-wrapper keeps the single top and bottom border */
+	.section-two {
+		width: 42%;
+		padding: 0 20px;
+		border-top: none;
+		border-bottom: none;
+		border-left: 5px solid #EEE;
+		border-right: 5px solid #EEE;
+	}
+
+	.section-three {
+		width: 29%;
+	}
+}
+
+/******** DESKTOP STYLES ********/
+@media all and (min-width: 1200px) {
+	body {
+		font-size: 1em;
+	}
+
+	/* The h1 and nav sit side by side, with the extra space between them */
+	header .content-wrapper {
+		justify-content: space-between;
+		align-items: center;
+		padding: 20px 0;
+	}
+
+	header h1 {
+		width: auto;
+		padding: 0;
+		border-bottom: none;
+		text-align: left;
+	}
+
+	header nav {
+		width: 21%;
+		padding: 0;
+	}
+
+	header nav ul {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	header nav ul li {
+		width: auto;
+		padding: 0;
+	}
+}
